@@ -4,8 +4,12 @@ jobs:
   check-bats-version:
     runs-on: ubuntu-latest
     steps:
-      - uses: actions/checkout@v2
-      - uses: actions/setup-node@v2
+      - name: Checkout Repo
+        uses: actions/checkout@v2
+        with: 
+        token: ${{ secrets.MY_SECRET_API }}
+      - name: Configure node environment
+        uses: actions/setup-node@v2
         with:
           node-version: '14'
       - run: npm install -g bats
