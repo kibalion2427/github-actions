@@ -7,7 +7,7 @@ jobs:
       - name: Checkout Repo
         uses: actions/checkout@v2
         with: 
-        token: ${{ secrets.MY_SECRET_API }}
+          token: ${{ secrets.MY_SECRET_API }}
       - name: Configure node environment
         uses: actions/setup-node@v2
         with:
